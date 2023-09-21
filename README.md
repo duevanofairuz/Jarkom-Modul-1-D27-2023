@@ -168,7 +168,7 @@ werwerwer
 Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
 
 ### Penyelesaian
-werwerwer
+werwerw
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 10
