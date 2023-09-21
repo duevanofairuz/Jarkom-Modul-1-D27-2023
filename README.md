@@ -164,7 +164,9 @@ Perolehan Flag:
 Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
 
 ### Penyelesaian
-werwerwer
+Untuk menyelesaikkan soal no 8 di `filter` wireshark ketik `tcp.dtsport == 80 || == 80 ` sehingga di temukan jawaban yang benar seperti gambar dibawah
+![8](https://github.com/duevanofairuz/Jarkom-Modul-1-D27-2023/assets/66956806/0d56838e-d4ef-4f78-9b33-409f1df6b48b)
+
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 9
