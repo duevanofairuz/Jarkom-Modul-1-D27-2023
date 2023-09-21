@@ -151,8 +151,12 @@ Berapa jumlah packet yang menuju IP 184.87.193.88?
 ### Penyelesaian
 Kita cukup lakukan sintaks display filter berikut:
 ```ip.dst == 184.87.193.88```
+![7_1](images/7_1.png)
 
 Jumlah paket yang menuju IP tersebut adalah **6**
+
+Perolehan Flag:
+![7_2](images/7_2.png)
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 8
