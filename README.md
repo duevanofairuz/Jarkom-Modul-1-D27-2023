@@ -17,11 +17,13 @@ d. Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari
 
 ### Penyelesaian
 Untuk mengetahui protokol FTP yang digunakan untuk mengupload file bisa menggunakan sintaks display filter berikut:
-`ftp contains "STOR"`
+
+```ftp contains "STOR"```
 ![1_1](images/1_1.png)
 
 setelah mengetahui file yang diupload, kita bisa lakukan display filter berikut untuk mengetahui `Request` dan `Response` nya
-`ftp contains "zip"`
+
+```ftp contains "zip"```
 ![1_2](images/1_2.png)
 
 Untuk soal a dan b kita bisa lihat pada paket Request bagian berikut:
