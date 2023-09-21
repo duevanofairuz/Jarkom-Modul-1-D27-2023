@@ -41,7 +41,18 @@ Perolehan Flag:
 Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
 
 ### Penyelesaian
-werwerewr
+Kita perlu mencari paket-paket dengan alamat IP portal praktikum yakni **10.21.78.111** menggunakan display filter berikut:
+
+```ip.addr == 10.21.78.111```
+![2_1](images/2_1.png)
+
+setelah itu kita klik salah satu paket dan follow ke tcp streamnya
+![2_2](images/2_2.png)
+
+server yang dipakai adalah **gunicorn**
+
+Perolehan Flag:
+![2_3](images/2_3.png)
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 3
@@ -52,7 +63,19 @@ a. Berapa banyak paket yang tercapture dengan IP source maupun destination addre
 b. Protokol layer transport apa yang digunakan?
 
 ### Penyelesaian
-werwerwr
+Lakukan display filter sesuai alamat IP soal sebagai berikut:
+
+```ip.addr == 239.255.255.250```
+![3_1](images/3_1.png)
+
+lalu kita bisa lihat protocol layer yang digunakan adalah **UDP** (jawaban soal b), sehingga bisa kita tambahkan ke display filter menjadi:
+```ip.addr == 239.255.255.250 and udp.port == 3702```
+![3_2](images/3_2.png)
+
+setelah itu dapat kita hitung total paket nya yakni **21** (jawaban soal a)
+
+Perolehan Flag:
+![3_3](images/3_3.png)
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 4
@@ -60,7 +83,13 @@ werwerwr
 Berapa nilai checksum yang didapat dari header pada paket nomor 130?
 
 ### Penyelesaian
-werwerwerw
+Kita cukup scroll hingga menemukan paket nomor 130 lalu buka deskripsi TCP nya seperti berikut:
+![4_1](images/4_1.png)
+
+nilai checksum yang dimaksud adalah: **0x18e5**
+
+Perolehan Flag:
+![4_2](images/4_2.png)
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 5
@@ -73,15 +102,46 @@ b. Port berapakah pada server yang digunakan untuk service SMTP?
 c. Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
 
 ### Penyelesaian
-werwerwewe
+Di soal nomor 5 ini kita tidak mendapatkan **kode netcat** nya secara langsung, jadi untuk menyelesaikannya 
+* Pertama-tama kita download file **.zip** yang disediakan soal
+* Lalu kita cari **password** nya dengan cara mencari file / paket yang unik yang ada di file pcap, berikut ini adalah paket yang unik
+![5_1](images/5_1.png)
+
+* Buka tcp stream dan scroll hingga menemukan clue password
+![5_2](images/5_2.png)
+
+* Decode password **NWltcGxlUGFzNXdvcmQ=** menggunakan base64
+![5_3](images/5_3.png)
+PASSWORD: **5implePas5word**
+
+* Setelah itu ekstrak file zip, dan kita mendapatkan kode netcat nya yakni `nc 10.21.78.111 11111`
+
+* Untuk menyelesaikan soal a kita cukup scroll dan lihat total paket nya yakni **60** (jawaban soal a)
+* Untuk menyelesaikan soal b kita cukup klik salah satu paket dengan protokol SMTP
+![5_4](images/5_4.png)
+port yang digunakan adalah port **25** (jawaban soal b)
+
+* Untuk menyelesaikan soal c, karena hanya ada dua alamat IP di file capture tersebut kita cukup coba satu persatu, sehingga IP address yang dimaksud adalah **74.53.140.153** (jawaban soal c)
+
+Perolehan Flag:
+![5_5](images/5_5.png)
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 6
 ### Soal
-Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
+Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan **"server SOURCE ADDRESS 7812 is invalid"**. ketika ditelusuri di google, hasil pencarian hanya menampilkan **a1 e5 u21**. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
 
 ### Penyelesaian
-rwerwerwer
+Karena di soal diketahui **SOURCE ADDRESS 7812** maka kita cari paket nomor 7812 dan lihat alamat ip source nya
+![6_1](images/6_1.png)
+alamat ip yang dimaksud adalah: **104.18.14.101**
+
+Selanjutnya kita terjemahkan alamat ip tersebut menggunakan clue yang diberikan soal yakni **a1 e5 u21**
+![6_2](images/6_2.png)
+Kode error yang dimaksud: **JDRNJA**
+
+Perolehan Flag:
+![6_3](images/6_3.png)
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 7
@@ -89,7 +149,10 @@ rwerwerwer
 Berapa jumlah packet yang menuju IP 184.87.193.88?
 
 ### Penyelesaian
-rwerwerw
+Kita cukup lakukan sintaks display filter berikut:
+```ip.dst == 184.87.193.88```
+
+Jumlah paket yang menuju IP tersebut adalah **6**
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 8
