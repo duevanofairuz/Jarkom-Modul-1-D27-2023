@@ -164,7 +164,7 @@ Perolehan Flag:
 Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
 
 ### Penyelesaian
-Untuk menyelesaikkan soal no 8 di `filter` wireshark ketik `tcp.dtsport == 80 || == 80 ` sehingga di temukan jawaban yang benar seperti gambar dibawah
+Untuk menyelesaikkan soal no 8 di `filter` wireshark ketik `tcp.dtsport == 80 || udp.dstport == 80 ` sehingga di temukan jawaban yang benar seperti gambar dibawah
 ![8](https://github.com/duevanofairuz/Jarkom-Modul-1-D27-2023/assets/66956806/0d56838e-d4ef-4f78-9b33-409f1df6b48b)
 
 
@@ -185,6 +185,7 @@ Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet!
 
 ### Penyelesaian
 Untuk mencari user yang melakukan login ,pertama 
+
 ```Telnet```
 ![telnet](https://github.com/duevanofairuz/Jarkom-Modul-1-D27-2023/assets/66956806/676a2112-d98b-4753-bb87-85eea7f2295b)
 
