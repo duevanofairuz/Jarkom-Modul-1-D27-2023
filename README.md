@@ -113,4 +113,10 @@ werwerwer
 Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet!
 
 ### Penyelesaian
-rwerwerewr
+Untuk mencari user yang melakukan login ,pertama 
+```Telnet```
+![telnet](https://github.com/duevanofairuz/Jarkom-Modul-1-D27-2023/assets/66956806/676a2112-d98b-4753-bb87-85eea7f2295b)
+
+Setelah itu akan muncul tampilan `User` dan `password`
+![fr-marker-60](https://github.com/duevanofairuz/Jarkom-Modul-1-D27-2023/assets/66956806/bc1fa108-7709-4aa2-8e7c-4cfd67984573)
+
