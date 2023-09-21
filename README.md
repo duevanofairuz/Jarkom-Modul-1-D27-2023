@@ -16,8 +16,22 @@ c. Berapakah sequence number (raw) pada packet yang menunjukkan response dari ak
 d. Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
 
 ### Penyelesaian
-werhwueirwrw
+Untuk mengetahui protokol FTP yang digunakan untuk mengupload file bisa menggunakan sintaks display filter berikut:
+`ftp contains "STOR"`
+![1_1](images/1_1.png)
+
+setelah mengetahui file yang diupload, kita bisa lakukan display filter berikut untuk mengetahui `Request` dan `Response` nya
+`ftp contains "zip"`
 ![1_2](images/1_2.png)
+
+Untuk soal a dan b kita bisa lihat pada paket Request bagian berikut:
+![1_3](images/1_3.png)
+
+Sedangkan untuk soal b dan c kita bisa lihat pada paket Response bagian berikut:
+![1_4](images/1_4.png)
+
+Perolehan Flag:
+![1_5](images/1_5.png)
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 2
