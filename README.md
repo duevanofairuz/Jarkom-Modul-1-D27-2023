@@ -168,7 +168,9 @@ werwerwer
 Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
 
 ### Penyelesaian
-werwerw
+Untuk mencari alamat `10.51.40.1` yaitu dengan cara `ip.src == 10.51.40.1` di tambah konjungsi `&&` dan untuk mencari alamat yang tidak ingin kita cari dengan cara `ip.dst != 10.39.55.34`, jika digabung seperti   `ip.src == 10.51.40.1 && ip.dst != 10.39.55.34` sehingga di dapatkan jawaban yang benar seperti gambar di bawah
+![9](https://github.com/duevanofairuz/Jarkom-Modul-1-D27-2023/assets/66956806/ec18c80d-2edc-48ae-8a33-1403a904bb72)
+
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 10
