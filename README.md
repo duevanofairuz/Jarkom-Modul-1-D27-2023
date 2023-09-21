@@ -7,9 +7,12 @@ Anggota Kelompok Jarkom D27:
 # No. 1
 ### Soal
 User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya adalah mengunggah suatu file.
-a. Berapakah sequence number (raw) pada packet yang menunjukkan aktivitas tersebut? 
+a. Berapakah sequence number (raw) pada packet yang menunjukkan aktivitas tersebut?
+
 b. Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut? 
+
 c. Berapakah sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
+
 d. Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
 
 ### Penyelesaian
@@ -29,6 +32,7 @@ werwerewr
 ### Soal
 Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
 a. Berapa banyak paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702
+
 b. Protokol layer transport apa yang digunakan?
 
 ### Penyelesaian
@@ -47,7 +51,9 @@ werwerwerw
 ### Soal
 Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
 a. Berapa banyak packet yang berhasil di capture dari file pcap tersebut?
+
 b. Port berapakah pada server yang digunakan untuk service SMTP?
+
 c. Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
 
 ### Penyelesaian
