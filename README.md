@@ -35,6 +35,8 @@ Sedangkan untuk soal b dan c kita bisa lihat pada paket Response bagian berikut:
 Perolehan Flag:
 ![1_5](images/1_5.png)
 
+Kendala: tidak ada
+
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 2
 ### Soal
@@ -53,6 +55,9 @@ server yang dipakai adalah **gunicorn**
 
 Perolehan Flag:
 ![2_3](images/2_3.png)
+
+Kendala:
+* awalnya bingung dengan kata 'sebutkan'
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 3
@@ -77,6 +82,8 @@ setelah itu dapat kita hitung total paket nya yakni **21** (jawaban soal a)
 Perolehan Flag:
 ![3_3](images/3_3.png)
 
+Kendala: tidak ada
+
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 4
 ### Soal
@@ -90,6 +97,8 @@ nilai checksum yang dimaksud adalah: **0x18e5**
 
 Perolehan Flag:
 ![4_2](images/4_2.png)
+
+Kendala: tidak ada
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 5
@@ -126,8 +135,11 @@ port yang digunakan adalah port **25** (jawaban soal b)
 Perolehan Flag:
 ![5_5](images/5_5.png)
 
+Kendala:
+* awalnya bingung dengan maksud soal dimana kami mengasumsikan password zip nya adalah gabungan angka dari jawaban a,b,c
+
 ----------------------------------------------------------------------------------------------------------------------------------
-# No. 6
+# No. 6 (REVISI)
 ### Soal
 Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan **"server SOURCE ADDRESS 7812 is invalid"**. ketika ditelusuri di google, hasil pencarian hanya menampilkan **a1 e5 u21**. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
 
@@ -142,6 +154,9 @@ Kode error yang dimaksud: **JDRNJA**
 
 Perolehan Flag:
 ![6_3](images/6_3.png)
+
+Kendala:
+* clue soal a1 e5 u21 lumayan membingungkan, lebih baik ditulis A1 E5 U21
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 7
@@ -158,15 +173,19 @@ Jumlah paket yang menuju IP tersebut adalah **6**
 Perolehan Flag:
 ![7_2](images/7_2.png)
 
+Kendala: tidak ada
+
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 8
 ### Soal
 Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
 
 ### Penyelesaian
-Untuk menyelesaikkan soal no 8 di `filter` wireshark ketik `tcp.dtsport == 80 || udp.dstport == 80 ` sehingga di temukan jawaban yang benar seperti gambar dibawah
+Untuk menyelesaikkan soal no 8 di `filter` wireshark ketik `tcp.dstport == 80 || udp.dstport == 80 ` sehingga di temukan jawaban yang benar seperti gambar dibawah
 ![8](https://github.com/duevanofairuz/Jarkom-Modul-1-D27-2023/assets/66956806/0d56838e-d4ef-4f78-9b33-409f1df6b48b)
 
+Kendala: 
+* case sensitive yang lumayan merepotkan
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 9
@@ -177,6 +196,8 @@ Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari 
 Untuk mencari alamat `10.51.40.1` yaitu dengan cara `ip.src == 10.51.40.1` di tambah konjungsi `&&` dan untuk mencari alamat yang tidak ingin kita cari dengan cara `ip.dst != 10.39.55.34`, jika digabung seperti   `ip.src == 10.51.40.1 && ip.dst != 10.39.55.34` sehingga di dapatkan jawaban yang benar seperti gambar di bawah
 ![9](https://github.com/duevanofairuz/Jarkom-Modul-1-D27-2023/assets/66956806/ec18c80d-2edc-48ae-8a33-1403a904bb72)
 
+Kendala:
+* case sensitive yang lumayan merepotkan
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # No. 10
@@ -192,3 +213,5 @@ Untuk mencari user yang melakukan login ,pertama
 Setelah itu akan muncul tampilan `User` dan `password`
 ![fr-marker-60](https://github.com/duevanofairuz/Jarkom-Modul-1-D27-2023/assets/66956806/bc1fa108-7709-4aa2-8e7c-4cfd67984573)
 
+Kendala:
+* brute force username yang mana di paket tertulis **ddhhaaffiinn** tetapi jawaban yang benar **dhafin**
